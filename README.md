@@ -79,7 +79,7 @@ js-fullstack/
 
 1. **Clonar el repositorio**
    ```bash
-   git clone <url-del-repositorio>
+   git clone https://github.com/PuelloJ/JS-FULLSTACK-TUTORIAL.git
    cd js-fullstack
    ```
 
