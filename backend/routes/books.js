@@ -9,8 +9,9 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const { title, author, ISBN } = req.body;
-  const newBook = new Books({ title, author, isbn: ISBN });
+  const { title, author, isbn } = req.body;
+  const imagePath = `/uploads/${req.file.filename}`;
+  const newBook = new Books({ title, author, isbn, image: imagePath });
   await newBook.save();
   res.status(201).json({ message: "Book saved successfully" });
 });
