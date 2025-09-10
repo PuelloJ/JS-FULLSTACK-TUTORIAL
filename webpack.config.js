@@ -11,6 +11,8 @@ module.exports = {
     filename: "js/bundle.js",
   },
 
+  mode: "development",
+
   module: {
     rules: [
       {
@@ -36,8 +38,8 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-        filename: "css/bundle.css",
-    })
+      filename: "css/bundle.css",
+    }),
   ],
   devtool: "source-map",
 };

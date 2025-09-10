@@ -5,6 +5,7 @@ const express = require("express");
 const morgan = require("morgan");
 const multer = require("multer");
 const path = require("path");
+const cors = require("cors");
 
 // Initialization
 const app = express();
@@ -30,6 +31,9 @@ app.use(express.urlencoded({ extended: false }));
 
 // Parse application/json
 app.use(express.json());
+
+// CORS
+app.use(cors());
 
 // Routes
 app.use("/api/books", require("./routes/books"));
